@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> SIT725 - Week1 - Task 1.4P </title>
+        <meta name="description" content="Basic Template for SIT 725">
+        <meta name="author" content="SitePoint">
+        <meta property="og:title" content="SIT725 Workshops">
+        <meta property= "og:type" content="website">
+        <meta property= "og:description" content="Basic template">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- JavaScript -->  
+    <script>
+        //changeText(): It changes the text and background color (random)
+        function changeText() {
+            document.getElementById("bg").style.backgroundColor = rndColor();
+            document.getElementById("heading").innerHTML = "Congratulation! You did it!";
+        }
+        //Randomly generating a hexadecimal value for colors
+        function rndColor(){
+            var hexValue = '0123456789ABCDEF';
+            var value = '#';
+            for (var i = 0; i < 6; i++) {
+                value += hexValue[Math.floor(Math.random() * hexValue.length)];
+            }
+            return value;
+        }
+    </script>
+
+</head>
+<body id="bg">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1 id="heading" class="center-align"> SIT725 - Task 1.4P </h1>
+            </div>
+            <div class="col s12 center-align">
+                <a class="waves-effect waves-light btn" onclick="changeText()"> Click for Magic! </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
